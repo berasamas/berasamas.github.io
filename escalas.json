@@ -1,0 +1,1730 @@
+{
+  "versao": "2.0",
+  "tags_disponiveis": [
+    {
+      "id": "qualidade-preferencia",
+      "nome": "Qualidade e preferência",
+      "tipo": "categoria"
+    },
+    {
+      "id": "sensacoes-propriedades",
+      "nome": "Sensações e propriedades",
+      "tipo": "categoria"
+    },
+    {
+      "id": "comportamento-convivencia",
+      "nome": "Comportamento e convivência",
+      "tipo": "categoria"
+    },
+    {
+      "id": "moral-impacto",
+      "nome": "Moral e impacto",
+      "tipo": "categoria"
+    },
+    {
+      "id": "conceitos-possibilidades",
+      "nome": "Conceitos e possibilidades",
+      "tipo": "categoria"
+    },
+    {
+      "id": "fronteiras-classificacoes",
+      "nome": "Fronteiras e classificações",
+      "tipo": "categoria"
+    },
+    {
+      "id": "cultura-experiencias",
+      "nome": "Cultura e experiências",
+      "tipo": "categoria"
+    },
+    {
+      "id": "aberto",
+      "nome": "Aberto",
+      "tipo": "abertura"
+    },
+    {
+      "id": "amplo",
+      "nome": "Amplo",
+      "tipo": "abertura"
+    },
+    {
+      "id": "tematico",
+      "nome": "Temático",
+      "tipo": "abertura"
+    }
+  ],
+  "escalas": [
+    {
+      "id": "V2-001",
+      "extremo_esquerdo": "Subestimado",
+      "extremo_direito": "Superestimado",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-002",
+      "extremo_esquerdo": "Frio",
+      "extremo_direito": "Quente",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-003",
+      "extremo_esquerdo": "Inútil",
+      "extremo_direito": "Útil",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-004",
+      "extremo_esquerdo": "Normal",
+      "extremo_direito": "Estranho",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-005",
+      "extremo_esquerdo": "Frágil",
+      "extremo_direito": "Resistente",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-006",
+      "extremo_esquerdo": "Lixo",
+      "extremo_direito": "Arte",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-007",
+      "extremo_esquerdo": "Mau conselho",
+      "extremo_direito": "Bom conselho",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-008",
+      "extremo_esquerdo": "Não é brinquedo",
+      "extremo_direito": "É brinquedo",
+      "origem": "referencia_usuario",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-009",
+      "extremo_esquerdo": "Pior superpoder",
+      "extremo_direito": "Melhor superpoder",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-010",
+      "extremo_esquerdo": "Pior cobertura de pizza",
+      "extremo_direito": "Melhor cobertura de pizza",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-011",
+      "extremo_esquerdo": "Leve",
+      "extremo_direito": "Pesado",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-012",
+      "extremo_esquerdo": "Discreto",
+      "extremo_direito": "Extravagante",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-013",
+      "extremo_esquerdo": "Esquecível",
+      "extremo_direito": "Memorável",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-014",
+      "extremo_esquerdo": "Genérico",
+      "extremo_direito": "Original",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-015",
+      "extremo_esquerdo": "Superficial",
+      "extremo_direito": "Profundo",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-016",
+      "extremo_esquerdo": "Temporário",
+      "extremo_direito": "Permanente",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-017",
+      "extremo_esquerdo": "Esperado",
+      "extremo_direito": "Inesperado",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-018",
+      "extremo_esquerdo": "Confiável",
+      "extremo_direito": "Não confiável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-019",
+      "extremo_esquerdo": "Pacífico",
+      "extremo_direito": "Agressivo",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-020",
+      "extremo_esquerdo": "Perdoável",
+      "extremo_direito": "Imperdoável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-021",
+      "extremo_esquerdo": "Barato",
+      "extremo_direito": "Caro",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-022",
+      "extremo_esquerdo": "Confortável",
+      "extremo_direito": "Desconfortável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-023",
+      "extremo_esquerdo": "Não é esporte",
+      "extremo_direito": "É esporte",
+      "origem": "referencia_usuario",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-024",
+      "extremo_esquerdo": "Péssimo presente",
+      "extremo_direito": "Ótimo presente",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-025",
+      "extremo_esquerdo": "Má companhia",
+      "extremo_direito": "Boa companhia",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-026",
+      "extremo_esquerdo": "Lugar para evitar",
+      "extremo_direito": "Lugar para conhecer",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-027",
+      "extremo_esquerdo": "Trabalho dos sonhos",
+      "extremo_direito": "Trabalho dos pesadelos",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-028",
+      "extremo_esquerdo": "Não é trabalho",
+      "extremo_direito": "É trabalho",
+      "origem": "criada_no_chat",
+      "tags": [
+        "fronteiras-classificacoes",
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-029",
+      "extremo_esquerdo": "Lanche",
+      "extremo_direito": "Refeição completa",
+      "origem": "referencia_usuario",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-030",
+      "extremo_esquerdo": "Filme ruim",
+      "extremo_direito": "Filme bom",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-031",
+      "extremo_esquerdo": "Necessário",
+      "extremo_direito": "Exagerado",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-032",
+      "extremo_esquerdo": "Urgente",
+      "extremo_direito": "Pode esperar",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-033",
+      "extremo_esquerdo": "Fácil de esconder",
+      "extremo_direito": "Difícil de esconder",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-034",
+      "extremo_esquerdo": "Fácil de encontrar",
+      "extremo_direito": "Difícil de encontrar",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-035",
+      "extremo_esquerdo": "Fácil de substituir",
+      "extremo_direito": "Insubstituível",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-036",
+      "extremo_esquerdo": "Fácil de dividir",
+      "extremo_direito": "Difícil de dividir",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-037",
+      "extremo_esquerdo": "Aproxima",
+      "extremo_direito": "Afasta",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-038",
+      "extremo_esquerdo": "Impessoal",
+      "extremo_direito": "Pessoal",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-039",
+      "extremo_esquerdo": "Liberta",
+      "extremo_direito": "Prende",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-040",
+      "extremo_esquerdo": "Controlável",
+      "extremo_direito": "Incontrolável",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-041",
+      "extremo_esquerdo": "Reversível",
+      "extremo_direito": "Irreversível",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-042",
+      "extremo_esquerdo": "Portátil",
+      "extremo_direito": "Fixo",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-043",
+      "extremo_esquerdo": "Dá vontade de repetir",
+      "extremo_direito": "Uma vez basta",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-044",
+      "extremo_esquerdo": "Individual",
+      "extremo_direito": "Coletivo",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-045",
+      "extremo_esquerdo": "Informal",
+      "extremo_direito": "Formal",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-046",
+      "extremo_esquerdo": "Escasso",
+      "extremo_direito": "Abundante",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-047",
+      "extremo_esquerdo": "Começo",
+      "extremo_direito": "Fim",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-048",
+      "extremo_esquerdo": "Dá para fazer no automático",
+      "extremo_direito": "Exige atenção total",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-049",
+      "extremo_esquerdo": "Desculpa esfarrapada",
+      "extremo_direito": "Desculpa convincente",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "qualidade-preferencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-050",
+      "extremo_esquerdo": "Assunto para cinco minutos",
+      "extremo_direito": "Assunto para a noite inteira",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-051",
+      "extremo_esquerdo": "Promessa fácil de cumprir",
+      "extremo_direito": "Promessa difícil de cumprir",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-052",
+      "extremo_esquerdo": "Tradição que vale manter",
+      "extremo_direito": "Tradição que vale abandonar",
+      "origem": "criada_no_chat",
+      "tags": [
+        "cultura-experiencias",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-053",
+      "extremo_esquerdo": "Coisa de criança",
+      "extremo_direito": "Coisa de adulto",
+      "origem": "criada_no_chat",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-054",
+      "extremo_esquerdo": "Falta de educação",
+      "extremo_direito": "Excesso de educação",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-055",
+      "extremo_esquerdo": "Conquista pequena",
+      "extremo_direito": "Conquista enorme",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-056",
+      "extremo_esquerdo": "Mensagem que pede resposta",
+      "extremo_direito": "Mensagem que dispensa resposta",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-057",
+      "extremo_esquerdo": "Péssima hora para rir",
+      "extremo_direito": "Ótima hora para rir",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-059",
+      "extremo_esquerdo": "Café da manhã de pressa",
+      "extremo_direito": "Café da manhã de férias",
+      "origem": "criada_no_chat",
+      "tags": [
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-060",
+      "extremo_esquerdo": "Comida que dispensa talheres",
+      "extremo_direito": "Comida que exige talheres",
+      "origem": "criada_no_chat",
+      "tags": [
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-061",
+      "extremo_esquerdo": "Intuitivo",
+      "extremo_direito": "Contraintuitivo",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-062",
+      "extremo_esquerdo": "Flexível",
+      "extremo_direito": "Rígido",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-063",
+      "extremo_esquerdo": "Direto",
+      "extremo_direito": "Indireto",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-064",
+      "extremo_esquerdo": "Isolado",
+      "extremo_direito": "Conectado",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-065",
+      "extremo_esquerdo": "Não deixa rastro",
+      "extremo_direito": "Deixa sua marca",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "moral-impacto",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-066",
+      "extremo_esquerdo": "Quanto menos, melhor",
+      "extremo_direito": "Quanto mais, melhor",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-067",
+      "extremo_esquerdo": "Serve para uma coisa",
+      "extremo_direito": "Serve para muitas coisas",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-068",
+      "extremo_esquerdo": "Devolve energia",
+      "extremo_direito": "Consome energia",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-069",
+      "extremo_esquerdo": "Acumula",
+      "extremo_direito": "Se dissipa",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-070",
+      "extremo_esquerdo": "Deixa margem",
+      "extremo_direito": "Não deixa margem",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-071",
+      "extremo_esquerdo": "Absorve",
+      "extremo_direito": "Reflete",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-072",
+      "extremo_esquerdo": "Foge à regra",
+      "extremo_direito": "Define a regra",
+      "origem": "criada_no_chat",
+      "tags": [
+        "conceitos-possibilidades",
+        "fronteiras-classificacoes",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-073",
+      "extremo_esquerdo": "Melhora com o uso",
+      "extremo_direito": "Piora com o uso",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-074",
+      "extremo_esquerdo": "Vale pelo caminho",
+      "extremo_direito": "Vale pelo resultado",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-075",
+      "extremo_esquerdo": "Protege",
+      "extremo_direito": "Expõe",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-076",
+      "extremo_esquerdo": "Cabe na rotina",
+      "extremo_direito": "Muda a rotina",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-077",
+      "extremo_esquerdo": "Se adapta",
+      "extremo_direito": "Obriga a adaptar",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-078",
+      "extremo_esquerdo": "Melhor em silêncio",
+      "extremo_direito": "Melhor com barulho",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-079",
+      "extremo_esquerdo": "Algo que você empresta",
+      "extremo_direito": "Algo que você não empresta",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "moral-impacto",
+        "fronteiras-classificacoes",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-080",
+      "extremo_esquerdo": "Pedido para atender",
+      "extremo_direito": "Pedido para recusar",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-081",
+      "extremo_esquerdo": "Problema divertido",
+      "extremo_direito": "Problema desesperador",
+      "origem": "criada_no_chat",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-082",
+      "extremo_esquerdo": "Favor sem compromisso",
+      "extremo_direito": "Favor que vira dívida",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-083",
+      "extremo_esquerdo": "Erro sem consequência",
+      "extremo_direito": "Erro que muda tudo",
+      "origem": "criada_no_chat",
+      "tags": [
+        "moral-impacto",
+        "conceitos-possibilidades",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-087",
+      "extremo_esquerdo": "Visita que termina cedo",
+      "extremo_direito": "Visita que vira estadia",
+      "origem": "criada_no_chat",
+      "tags": [
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "V2-088",
+      "extremo_esquerdo": "Ingrediente que some",
+      "extremo_direito": "Ingrediente que domina o prato",
+      "origem": "criada_no_chat",
+      "tags": [
+        "sensacoes-propriedades",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "V2-091",
+      "extremo_esquerdo": "Muito comum no dia a dia",
+      "extremo_direito": "Extremamente raro",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "V2-092",
+      "extremo_esquerdo": "Acontece rápido",
+      "extremo_direito": "Demora uma eternidade",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-001",
+      "extremo_esquerdo": "Ruim",
+      "extremo_direito": "Bom",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-005",
+      "extremo_esquerdo": "Gosto ruim",
+      "extremo_direito": "Gosto bom",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-006",
+      "extremo_esquerdo": "Sem graça",
+      "extremo_direito": "Engraçado",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-008",
+      "extremo_esquerdo": "Cheira mal",
+      "extremo_direito": "Cheira bem",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-009",
+      "extremo_esquerdo": "Tedioso",
+      "extremo_direito": "Emocionante",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-012",
+      "extremo_esquerdo": "Macio",
+      "extremo_direito": "Duro",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-013",
+      "extremo_esquerdo": "Redondo",
+      "extremo_direito": "Pontudo",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-014",
+      "extremo_esquerdo": "Feio",
+      "extremo_direito": "Bonito",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-015",
+      "extremo_esquerdo": "Perigoso",
+      "extremo_direito": "Seguro",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "moral-impacto",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-018",
+      "extremo_esquerdo": "Difícil de fazer",
+      "extremo_direito": "Fácil de fazer",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-019",
+      "extremo_esquerdo": "Seco",
+      "extremo_direito": "Molhado",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-020",
+      "extremo_esquerdo": "Desconhecido",
+      "extremo_direito": "Famoso",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-021",
+      "extremo_esquerdo": "Áspero",
+      "extremo_direito": "Liso",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-023",
+      "extremo_esquerdo": "Colorido",
+      "extremo_direito": "Sem cor",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-024",
+      "extremo_esquerdo": "Sensação ruim na boca",
+      "extremo_direito": "Sensação boa na boca",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "qualidade-preferencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-025",
+      "extremo_esquerdo": "Silencioso",
+      "extremo_direito": "Barulhento",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-026",
+      "extremo_esquerdo": "Vive pouco",
+      "extremo_direito": "Vive muito",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-027",
+      "extremo_esquerdo": "Não parece uma pessoa",
+      "extremo_direito": "Parece uma pessoa",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "fronteiras-classificacoes",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-028",
+      "extremo_esquerdo": "Baixa caloria",
+      "extremo_direito": "Alta caloria",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-029",
+      "extremo_esquerdo": "Mental",
+      "extremo_direito": "Físico",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-030",
+      "extremo_esquerdo": "Natural",
+      "extremo_direito": "Artificial",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "fronteiras-classificacoes",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-031",
+      "extremo_esquerdo": "Cansado",
+      "extremo_direito": "Cheio de energia (Ligado)",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-032",
+      "extremo_esquerdo": "Saudável",
+      "extremo_direito": "Não saudável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-033",
+      "extremo_esquerdo": "Faz mal para você",
+      "extremo_direito": "Faz bem para você",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "moral-impacto",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-035",
+      "extremo_esquerdo": "Natureza (Nasce assim)",
+      "extremo_direito": "Criação (Aprende a ser assim)",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "comportamento-convivencia",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-036",
+      "extremo_esquerdo": "Não é um sanduíche",
+      "extremo_direito": "É um sanduíche",
+      "origem": "referencia_usuario",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-039",
+      "extremo_esquerdo": "Doce ruim",
+      "extremo_direito": "Doce bom",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-041",
+      "extremo_esquerdo": "Hobby chato",
+      "extremo_direito": "Hobby interessante",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-042",
+      "extremo_esquerdo": "Requer sorte",
+      "extremo_direito": "Requer habilidade",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-043",
+      "extremo_esquerdo": "Ficção Científica",
+      "extremo_direito": "Fantasia",
+      "origem": "referencia_usuario",
+      "tags": [
+        "fronteiras-classificacoes",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-045",
+      "extremo_esquerdo": "Série ruim",
+      "extremo_direito": "Série boa",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-046",
+      "extremo_esquerdo": "Mau ator",
+      "extremo_direito": "Bom ator",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-047",
+      "extremo_esquerdo": "Modinha",
+      "extremo_direito": "Clássico",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-048",
+      "extremo_esquerdo": "Sem talento",
+      "extremo_direito": "Talentoso",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-049",
+      "extremo_esquerdo": "Fora de moda",
+      "extremo_direito": "Na moda",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-050",
+      "extremo_esquerdo": "Impopular",
+      "extremo_direito": "Popular",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-051",
+      "extremo_esquerdo": "Prazer culposo (Guilty pleasure)",
+      "extremo_direito": "Ama abertamente",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-052",
+      "extremo_esquerdo": "Jogo ruim",
+      "extremo_direito": "Jogo bom",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-053",
+      "extremo_esquerdo": "Pessoa ruim",
+      "extremo_direito": "Pessoa boa",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-054",
+      "extremo_esquerdo": "Antiético",
+      "extremo_direito": "Ético",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-055",
+      "extremo_esquerdo": "Herói",
+      "extremo_direito": "Vilão",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "cultura-experiencias",
+        "fronteiras-classificacoes",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-057",
+      "extremo_esquerdo": "Vício",
+      "extremo_direito": "Virtude",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-058",
+      "extremo_esquerdo": "Segredo",
+      "extremo_direito": "Conhecimento público",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-060",
+      "extremo_esquerdo": "Ninguém faz",
+      "extremo_direito": "Todo mundo faz",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-061",
+      "extremo_esquerdo": "Ditadura",
+      "extremo_direito": "Democracia",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "conceitos-possibilidades",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-063",
+      "extremo_esquerdo": "Pior ano da história",
+      "extremo_direito": "Melhor ano da história",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-064",
+      "extremo_esquerdo": "Pior dia do ano",
+      "extremo_direito": "Melhor dia do ano",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-066",
+      "extremo_esquerdo": "Ruim para o meio ambiente",
+      "extremo_direito": "Bom para o meio ambiente",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "moral-impacto",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-068",
+      "extremo_esquerdo": "Pouco atraente",
+      "extremo_direito": "Atraente",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-069",
+      "extremo_esquerdo": "Nada sexy",
+      "extremo_direito": "Sexy",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-070",
+      "extremo_esquerdo": "Simples",
+      "extremo_direito": "Chique",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "sensacoes-propriedades",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-071",
+      "extremo_esquerdo": "A pior coisa",
+      "extremo_direito": "A melhor coisa",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-072",
+      "extremo_esquerdo": "Pior tarefa doméstica",
+      "extremo_direito": "Melhor tarefa doméstica",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-074",
+      "extremo_esquerdo": "Pior raça de cachorro",
+      "extremo_direito": "Melhor raça de cachorro",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "tematico"
+      ]
+    },
+    {
+      "id": "REF-078",
+      "extremo_esquerdo": "Imprevisível",
+      "extremo_direito": "Previsível",
+      "origem": "referencia_usuario",
+      "tags": [
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-079",
+      "extremo_esquerdo": "Estúpido",
+      "extremo_direito": "Brilhante",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-082",
+      "extremo_esquerdo": "Precisa de atualização",
+      "extremo_direito": "Não precisa de atualização",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-085",
+      "extremo_esquerdo": "Pouco profissional",
+      "extremo_direito": "Profissional",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-086",
+      "extremo_esquerdo": "Perda de tempo",
+      "extremo_direito": "Bom uso do tempo",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-087",
+      "extremo_esquerdo": "Não assusta",
+      "extremo_direito": "Assustador",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "qualidade-preferencia",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-088",
+      "extremo_esquerdo": "Introvertido",
+      "extremo_direito": "Extrovertido",
+      "origem": "referencia_usuario",
+      "tags": [
+        "comportamento-convivencia",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-089",
+      "extremo_esquerdo": "Sem importância",
+      "extremo_direito": "Importante",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-090",
+      "extremo_esquerdo": "Inacreditável",
+      "extremo_direito": "Acreditável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-091",
+      "extremo_esquerdo": "Instável",
+      "extremo_direito": "Estável",
+      "origem": "referencia_usuario",
+      "tags": [
+        "sensacoes-propriedades",
+        "conceitos-possibilidades",
+        "aberto"
+      ]
+    },
+    {
+      "id": "REF-092",
+      "extremo_esquerdo": "Mau investimento",
+      "extremo_direito": "Bom investimento",
+      "origem": "referencia_usuario",
+      "tags": [
+        "qualidade-preferencia",
+        "conceitos-possibilidades",
+        "amplo"
+      ]
+    },
+    {
+      "id": "REF-093",
+      "extremo_esquerdo": "Distopia",
+      "extremo_direito": "Utopia",
+      "origem": "referencia_usuario",
+      "tags": [
+        "moral-impacto",
+        "conceitos-possibilidades",
+        "cultura-experiencias",
+        "aberto"
+      ]
+    }
+  ]
+}
