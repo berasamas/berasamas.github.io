@@ -733,6 +733,8 @@ button:hover {
     #turn-indicator {
         display: none; /* Hide for mobile to save space and avoid redundancy */
     }
+}
+
 /* Changelog Specific Styles */
 .changelog-content {
     text-align: left;
@@ -768,3 +770,54 @@ button:hover {
     color: #333;
 }
 
+
+
+/* Optional feedback, outside the spectrum overlay and visible only to the clue giver. */
+[hidden] { display: none !important; }
+.rating-card {
+    box-sizing: border-box;
+    width: min(100%, 400px);
+    margin: 16px auto 0;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    text-align: center;
+}
+.rating-header { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 0 0 12px; font: 700 15px Roboto, sans-serif; color: #2f3542; }
+.rating-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.rating-label { min-width: 80px; text-align: left; font-size: 13px; font-weight: 700; color: #57606f; }
+.rating-buttons { display: flex; gap: 6px; }
+.rating-card .vote-chip {
+    min-width: 55px; min-height: 36px; margin: 0; padding: 5px 12px;
+    font: 600 12px Roboto, sans-serif; color: #2f3542; background: #f1f2f6;
+    border: 1px solid #ced6e0; border-radius: 20px; cursor: pointer;
+    box-shadow: none; transform: none; transition: background-color .15s;
+}
+.rating-card .vote-chip:hover { background: #dceaff; border-color: #4a90e2; }
+.rating-card .vote-chip[aria-pressed="true"] { color: #fff; background: #287942; border-color: #287942; }
+.rating-card .vote-chip:focus-visible, .rating-retry:focus-visible { outline: 3px solid #4a90e2; outline-offset: 3px; }
+.rating-status { margin: 9px 0 0; min-height: 16px; font-size: 12px; color: #57606f; }
+.rating-card .rating-retry { font-size: 12px; margin: 8px 0 0; padding: 8px 12px; }
+/* Long Portuguese extremes must expand the container instead of overlapping the card. */
+.game-container > #gameBoardAndCluesContainer { height: auto; padding-bottom: 10px; }
+.clue { min-width: 0; overflow-wrap: break-word; }
+@media (max-width: 768px) {
+    :root { --spectrum-width: min(300px, calc(100vw - 32px)); }
+    .game-container { box-sizing: border-box; max-height: none; overflow: visible; min-height: 100vh; }
+    .bidirectional-arrow { width: 40px; margin: 0 8px; }
+    .clue { padding: 0 4px; font-size: 16px; }
+    .game-container > #gameBoardAndCluesContainer, .board, .target-area { width: var(--spectrum-width); }
+    .board, .target-area { height: calc(var(--spectrum-width) / 2); }
+    .reveal-overlay { width: var(--spectrum-width); height: calc(var(--spectrum-width) / 2); }
+    .rating-card { padding: 12px; }
+    .rating-card .vote-chip { padding: 5px 9px; min-height: 44px; }
+    .rating-card + .controls { margin-top: 14px; }
+}
+@media (max-width: 359px) {
+    .rating-row { flex-wrap: wrap; }
+    .rating-buttons { width: 100%; }
+    .rating-card .vote-chip { flex: 1; }
+    .game-container > #gameBoardAndCluesContainer, .board, .target-area { max-width: 100%; }
+}
