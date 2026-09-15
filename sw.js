@@ -1,71 +1,32 @@
-const CACHE_NAME = 'wavelength-game-cache-v5';
-const urlsToCache = [
-  './', // Caches the current directory
-  './index.html',
-  './style.css',
-  './script.js',
-  './clues.json',
-  './privacy.html',
-  './terms.html',
-  './about.html',
-  './changelog.html',
-  'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js',
-  'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',
-  'https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap'
-];
+const CACHE_NAME = 'wavelength-game-cache-v6';
+const coreFiles = ['./', './index.html', './style.css', './script.js', './feedback.js', './escalas.json'];
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+self.addEventListener('install', event => {
+    event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(coreFiles)));
 });
 
-self.addEventListener('fetch', (event) => {
-  // For HTML requests, try the network first, then fall back to cache
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-    event.respondWith(
-      fetch(event.request).then((response) => {
-        // Cache the fetched response for future offline use
-        return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      }).catch(() => {
-        // If network fails, serve from cache
-        return caches.match(event.request);
-      })
-    );
-  } else {
-    // For other assets (CSS, JS, images, etc.), use cache-first
-    event.respondWith(
-      caches.match(event.request)
-        .then((response) => {
-          // Cache hit - return response
-          if (response) {
+self.addEventListener('activate', event => {
+    event.waitUntil(caches.keys().then(names => Promise.all(
+        names.filter(name => name.startsWith('wavelength-game-cache-') && name !== CACHE_NAME)
+            .map(name => caches.delete(name))
+    )));
+});
+
+self.addEventListener('fetch', event => {
+    const url = new URL(event.request.url);
+    // Firebase/authentication and third-party requests go straight to the network.
+    if (event.request.method !== 'GET' || url.origin !== self.location.origin ||
+        !url.pathname.startsWith(new URL(self.registration.scope).pathname)) return;
+    event.respondWith((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        try {
+            const response = await fetch(event.request);
+            if (response.ok) await cache.put(event.request, response.clone());
             return response;
-          }
-          // No cache hit - fetch from network
-          return fetch(event.request);
-        })
-    );
-  }
-});
-
-self.addEventListener('activate', (event) => {
-  const cacheWhitelist = [CACHE_NAME];
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+        } catch (error) {
+            const cached = await cache.match(event.request);
+            if (cached) return cached;
+            throw error;
+        }
+    })());
 });
