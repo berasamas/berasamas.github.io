@@ -33,437 +33,43 @@ const gameContainer = document.querySelector('.game-container');
 
 
 
-// Now that all DOM elements are declared, we can parse the JSON and use the buttons.
-const cluesJSONString = `[
-    [
-        "Bad Company",
-        "Good Company"
-    ],
-    [
-        "Terrible Movie",
-        "Great Movie"
-    ],
-    [
-        "Forgettable Person",
-        "Memorable Person"
-    ],
-    [
-        "Culturally Insignificant",
-        "Culturally Significant"
-    ],
-    [
-        "Dry Food",
-        "Wet Food"
-    ],
-    [
-        "Easy to Do",
-        "Hard to Do"
-    ],
-    [
-        "Feels Bad",
-        "Feels Good"
-    ],
-    [
-        "Hairless",
-        "Hairy"
-    ],
-    [
-        "Hard to Remember",
-        "Easy to Remember"
-    ],
-    [
-        "Cold",
-        "Hot"
-    ],
-    [
-        "Inflexible",
-        "Flexible"
-    ],
-    [
-        "Clean Food",
-        "Messy Food"
-    ],
-    [
-        "Proper Utensil Food",
-        "Finger Food"
-    ],
-    [
-        "Want",
-        "Need"
-    ],
-    [
-        "Weird Thing to Own",
-        "Normal Thing to Own"
-    ],
-    [
-        "Poorly Made",
-        "Well Made"
-    ],
-    [
-        "Quiet Place",
-        "Loud Place"
-    ],
-    [
-        "Common",
-        "Rare"
-    ],
-    [
-        "Bad Influence",
-        "Role Model"
-    ],
-    [
-        "Pointy Animal",
-        "Round Animal"
-    ],
-    [
-        "Hard",
-        "Soft"
-    ],
-    [
-        "Ugly",
-        "Beautiful"
-    ],
-    [
-        "Underpaid Job",
-        "Overpaid Job"
-    ],
-    [
-        "Underrated Skill",
-        "Overrated Skill"
-    ],
-    [
-        "Unsexy Emoji",
-        "Sexy Emoji"
-    ],
-    [
-        "Useless",
-        "Useful"
-    ],
-    [
-        "Villain",
-        "Hero"
-    ],
-    [
-        "Worst Day Ever",
-        "Best Day Ever"
-    ],
-    [
-        "Boring Hobby",
-        "Exciting Hobby"
-    ],
-    [
-        "Useless Superpower",
-        "Awesome Superpower"
-    ],
-    [
-        "Lame Party Trick",
-        "Cool Party Trick"
-    ],
-    [
-        "Terrible First Date Spot",
-        "Perfect First Date Spot"
-    ],
-    [
-        "Awkward Conversation Topic",
-        "Engaging Conversation Topic"
-    ],
-    [
-        "Worst Pizza Topping",
-        "Best Pizza Topping"
-    ],
-    [
-        "Annoying Sound",
-        "Satisfying Sound"
-    ],
-    [
-        "Uncomfortable Clothing",
-        "Comfy Clothing"
-    ],
-    [
-        "Worst Smell",
-        "Best Smell"
-    ],
-    [
-        "Boring Class Subject",
-        "Fascinating Class Subject"
-    ],
-    [
-        "Terrible Gift",
-        "Thoughtful Gift"
-    ],
-    [
-        "Unhealthy Habit",
-        "Healthy Habit"
-    ],
-    [
-        "Worst Chore",
-        "Most Satisfying Chore"
-    ],
-    [
-        "Forgettable Song",
-        "Catchy Song"
-    ],
-    [
-        "Useless App",
-        "Must-Have App"
-    ],
-    [
-        "Terrible Supervillain Name",
-        "Awesome Superhero Name"
-    ],
-    [
-        "Worst Flavor",
-        "Best Flavor"
-    ],
-    [
-        "Boring Museum Exhibit",
-        "Mind-Blowing Museum Exhibit"
-    ],
-    [
-        "Terrible Band Name",
-        "Awesome Band Name"
-    ],
-    [
-        "Worst Yearbook Quote",
-        "Best Yearbook Quote"
-    ],
-    [
-        "Lame Excuse",
-        "Believable Excuse"
-    ],
-    [
-        "Terrible Mascot",
-        "Lovable Mascot"
-    ],
-    [
-        "Worst Invention",
-        "Life-Changing Invention"
-    ],
-    [
-        "Annoying Commercial",
-        "Memorable Commercial"
-    ],
-    [
-        "Terrible Pickup Line",
-        "Smooth Pickup Line"
-    ],
-    [
-        "Worst Sandwich Filling",
-        "Best Sandwich Filling"
-    ],
-    [
-        "Boring Screensaver",
-        "Hypnotic Screensaver"
-    ],
-    [
-        "Useless Life Hack",
-        "Game-Changing Life Hack"
-    ],
-    [
-        "Terrible Sitcom Premise",
-        "Hilarious Sitcom Premise"
-    ],
-    [
-        "Worst Karaoke Song",
-        "Crowd-Pleasing Karaoke Song"
-    ],
-    [
-        "Annoying Social Media Trend",
-        "Fun Social Media Trend"
-    ],
-    [
-        "Terrible Stage Name",
-        "Unforgettable Stage Name"
-    ],
-    [
-        "Worst Tongue Twister",
-        "Most Challenging Tongue Twister"
-    ],
-    [
-        "Boring Screensaver",
-        "Mesmerizing Screensaver"
-    ],
-    [
-        "Terrible Tattoo",
-        "Meaningful Tattoo"
-    ],
-    [
-        "Worst Bumper Sticker",
-        "Clever Bumper Sticker"
-    ],
-    [
-        "Annoying Catchphrase",
-        "Iconic Catchphrase"
-    ],
-    [
-        "Terrible Team Name",
-        "Intimidating Team Name"
-    ],
-    [
-        "Worst Flavor Combination",
-        "Unexpectedly Delicious Flavor Combination"
-    ],
-    [
-        "Useless College Course",
-        "Life-Changing College Course"
-    ],
-    [
-        "Terrible Podcast Topic",
-        "Binge-Worthy Podcast Topic"
-    ],
-    [
-        "Worst Theme Park Ride",
-        "Thrilling Theme Park Ride"
-    ],
-    [
-        "Annoying Pet Trick",
-        "Impressive Pet Trick"
-    ],
-    [
-        "Terrible Workout",
-        "Effective Workout"
-    ],
-    [
-        "Worst Board Game",
-        "Addictive Board Game"
-    ],
-    [
-        "Annoying Habit",
-        "Endearing Quirk"
-    ],
-    [
-        "Terrible Prank",
-        "Harmless Prank"
-    ],
-    [
-        "Worst Cereal Mascot",
-        "Beloved Cereal Mascot"
-    ],
-    [
-        "Annoying Alarm Sound",
-        "Gentle Wake-Up Alarm"
-    ],
-    [
-        "Terrible Vacation Spot",
-        "Dream Vacation Destination"
-    ],
-    [
-        "Worst Toy",
-        "Must-Have Toy"
-    ],
-    [
-        "Annoying TV Character",
-        "Fan-Favorite TV Character"
-    ],
-    [
-        "Terrible Superpower Side Effect",
-        "Awesome Superpower Perk"
-    ],
-    [
-        "Worst Ice Cream Flavor",
-        "Innovative Ice Cream Flavor"
-    ],
-    [
-        "Annoying Text Abbreviation",
-        "Useful Text Abbreviation"
-    ],
-    [
-        "Terrible Costume Idea",
-        "Creative Costume Idea"
-    ],
-    [
-        "Worst Cooking Mistake",
-        "Game-Changing Cooking Tip"
-    ],
-    [
-        "Annoying Exercise",
-        "Fun Exercise"
-    ],
-    [
-        "Terrible Breakup Method",
-        "Respectful Breakup Method"
-    ],
-    [
-        "Worst Motivational Poster",
-        "Actually Motivating Poster"
-    ],
-    [
-        "Annoying Car Feature",
-        "Useful Car Feature"
-    ],
-    [
-        "Terrible Hiding Spot",
-        "Clever Hiding Spot"
-    ],
-    [
-        "Worst Trend from Your Parents' Era",
-        "Cool Retro Trend"
-    ],
-    [
-        "Annoying Tourist Behavior",
-        "Respectful Tourist Behavior"
-    ],
-    [
-        "Terrible Roommate Habit",
-        "Ideal Roommate Quality"
-    ],
-    [
-        "Worst Reason to Call in Sick",
-        "Legitimate Reason to Call in Sick"
-    ],
-    [
-        "Annoying Phone Notification",
-        "Important Phone Notification"
-    ],
-    [
-        "Terrible Boat Name",
-        "Clever Boat Name"
-    ],
-    [
-        "Worst Reason to Break Up",
-        "Valid Reason to Break Up"
-    ],
-    [
-        "Annoying Gym Behavior",
-        "Proper Gym Etiquette"
-    ],
-    [
-        "Terrible Airline",
-        "Top-Rated Airline"
-    ],
-    [
-        "Worst Bathroom Graffiti",
-        "Profound Bathroom Graffiti"
-    ],
-    [
-        "Annoying Concert Behavior",
-        "Considerate Concert Behavior"
-    ],
-    [
-        "Terrible Hogwarts House",
-        "Best Hogwarts House"
-    ],
-    [
-        "Worst Reason to Get a Pet",
-        "Great Reason to Get a Pet"
-    ],
-    [
-        "Annoying Email Subject Line",
-        "Attention-Grabbing Email Subject Line"
-    ],
-    [
-        "Terrible Wifi Network Name",
-        "Clever Wifi Network Name"
-    ]
-]`;
+let catalogVersion;
+let gamePhase = "preparation";
+let presentationId = null;
+let lastRoundScore = null;
+let gameReady = false;
+let revealing = false;
 
-try {
-    clues = JSON.parse(cluesJSONString);
-} catch (error) {
-    console.error('Error parsing clues JSON:', error);
-    clues = []; // Ensure clues is always an array even if parsing fails
+function setGamePhase(phase) {
+    gamePhase = phase;
+    isTargetVisible = phase !== "guesser";
+    isPostGuessPhase = phase === "postGuess";
+    const scale = clues && clues[currentClueIndex];
+    const context = { phase, presentationId, scaleId: scale?.id, catalogVersion };
+    window.wavelengthFeedbackContext = context;
+    document.getElementById("ratingCard").hidden = phase !== "psychic" || !scale;
+    window.dispatchEvent(new CustomEvent("wavelength-phase", { detail: context }));
 }
 
+async function loadScales() {
+    const response = await fetch("./escalas.json");
+    if (!response.ok) throw new Error("Falha ao carregar escalas");
+    const data = await response.json();
+    const ids = new Set();
+    if (typeof data.versao !== "string" || !Array.isArray(data.escalas) || !data.escalas.length) {
+        throw new Error("Catálogo inválido");
+    }
+    for (const scale of data.escalas) {
+        if (typeof scale.id !== "string" || !scale.id || ids.has(scale.id) ||
+            typeof scale.extremo_esquerdo !== "string" || !scale.extremo_esquerdo.trim() ||
+            typeof scale.extremo_direito !== "string" || !scale.extremo_direito.trim()) {
+            throw new Error("Escala inválida ou ID duplicado");
+        }
+        ids.add(scale.id);
+    }
+    clues = data.escalas;
+    catalogVersion = data.versao;
+}
 
 // Helper to update debug status on screen
 const debugStatusDiv = document.getElementById('gemini-debug-status');
@@ -605,36 +211,52 @@ function updateScoreDisplay() {
 
 function saveGameState() {
     const gameState = {
-        teams: teams,
-        currentTeamIndex: currentTeamIndex,
-        currentClueIndex: currentClueIndex,
-        targetAngle: targetAngle, // Save target angle
-        isTargetVisible: isTargetVisible, // Save target visibility state
-        isPostGuessPhase: isPostGuessPhase // Save post-guess phase state
+        schemaVersion: 2, catalogVersion, teams, currentTeamIndex,
+        scaleId: clues?.[currentClueIndex]?.id || null,
+        presentationId, phase: gamePhase, targetAngle, currentNeedleAngle, lastRoundScore
     };
-    localStorage.setItem('wavelengthGameState', JSON.stringify(gameState));
+    try { localStorage.setItem('wavelengthGameState', JSON.stringify(gameState)); }
+    catch (error) { console.warn("Não foi possível salvar a partida neste navegador", error); }
 }
 
 function loadGameState() {
-    const savedState = localStorage.getItem('wavelengthGameState');
-    if (savedState) {
-        try {
-            const loadedState = JSON.parse(savedState);
-            currentClueIndex = loadedState.currentClueIndex;
-            targetAngle = typeof loadedState.targetAngle !== 'undefined' ? loadedState.targetAngle : 0; // Load target angle
-            isTargetVisible = typeof loadedState.isTargetVisible !== 'undefined' ? loadedState.isTargetVisible : true;
-            isPostGuessPhase = typeof loadedState.isPostGuessPhase !== 'undefined' ? loadedState.isPostGuessPhase : false;
-            return loadedState;
-        } catch (e) {
-            console.error("Error parsing saved game state:", e);
-            return null;
+    try {
+        const state = JSON.parse(localStorage.getItem('wavelengthGameState'));
+        if (!state || !Array.isArray(state.teams) || !state.teams.length ||
+            !state.teams.every(team => typeof team.name === "string" && Number.isFinite(team.score))) return null;
+        teams = state.teams;
+        currentTeamIndex = Number.isInteger(state.currentTeamIndex) && state.currentTeamIndex >= 0 &&
+            state.currentTeamIndex < teams.length ? state.currentTeamIndex : 0;
+        currentClueIndex = clues.findIndex(scale => scale.id === state.scaleId);
+        const validPhase = ["preparation", "psychic", "guesser", "postGuess"].includes(state.phase);
+        if (state.schemaVersion !== 2 || !validPhase || currentClueIndex < 0 ||
+            typeof state.presentationId !== "string" || !Number.isFinite(state.targetAngle) ||
+            state.targetAngle < -90 || state.targetAngle > 90) {
+            currentClueIndex = -1;
+            gamePhase = "preparation";
+            presentationId = null;
+            targetAngle = 0;
+            lastRoundScore = null;
+        } else {
+            gamePhase = state.phase;
+            presentationId = state.presentationId;
+            targetAngle = state.targetAngle;
+            currentNeedleAngle = Number.isFinite(state.currentNeedleAngle) ?
+                Math.max(-90, Math.min(90, state.currentNeedleAngle)) : 0;
+            lastRoundScore = [0, 1, 3, 5].includes(state.lastRoundScore) ? state.lastRoundScore : null;
         }
+        return state;
+    } catch (error) {
+        console.warn("Partida salva inválida", error);
+        return null;
     }
-    return null;
 }
 
 // New function to completely reset the game
 function resetGame() {
+    presentationId = null;
+    currentNeedleAngle = 0;
+    lastRoundScore = null;
     teams.forEach(team => team.score = 0); // Reset scores only, preserve team names and count
     currentTeamIndex = 0; // Reset current team to the first team
     currentClueIndex = -1;
@@ -653,10 +275,11 @@ function resetGame() {
 
 newGameButton.addEventListener("click", () => {
 
-    resetGame(); // Call the new reset function
+    if (gameReady && !revealing) resetGame(); // Start a new game
 });
 
 skipQuestionButton.addEventListener("click", () => {
+    if (!gameReady || gamePhase !== "psychic") return;
     scoreElement.textContent = "";
     currentClueIndex = -1; // Reset to get a new random clue next time
     setPsychicView();
@@ -665,6 +288,7 @@ skipQuestionButton.addEventListener("click", () => {
 });
 
 nextRoundButton.addEventListener("click", () => {
+    if (!gameReady || gamePhase !== "postGuess") return;
     currentTeamIndex = (currentTeamIndex + 1) % teams.length;
     updateScoreDisplay();
     scoreElement.textContent = "";
@@ -676,11 +300,13 @@ nextRoundButton.addEventListener("click", () => {
 });
 
 toggleButton.addEventListener("click", () => {
+    if (!gameReady || !["psychic", "guesser"].includes(gamePhase)) return;
     isTargetVisible = !isTargetVisible;
     if (isTargetVisible) {
         // This is the "Reveal Target" action
         const needleAngle = parseFloat(needle.style.transform.replace("rotate(", "").replace("deg)", "")) || 0;
         const score = calculateScore(needleAngle);
+        lastRoundScore = score;
         teams[currentTeamIndex].score += score;
         showPointsAnimation(score); // Call the new points animation function
         scoreElement.textContent = `${teams[currentTeamIndex].name} scored ${score} points!`; // Explicit message
@@ -699,7 +325,7 @@ toggleButton.addEventListener("click", () => {
         skipQuestionButton.style.display = "none";
         nextRoundButton.style.display = "inline-block";
         turnIndicator.textContent = "Nicely played! Next round awaits!"; // More fun message
-        isPostGuessPhase = true; // Set flag for post-guess phase
+        setGamePhase("postGuess"); // Keep feedback hidden after reveal
         saveGameState(); // Save state after score update
         updateCurrentTeamIndicator("postGuess"); // Update the "Now Playing" pill for post-guess phase
         canMoveNeedle = false;
@@ -713,6 +339,7 @@ toggleButton.addEventListener("click", () => {
 
 // New: Function to show the "Tap to Reveal" overlay and hide game elements
 function showRevealOverlay() {
+    setGamePhase("preparation");
     revealOverlay.style.display = 'flex'; // Ensure display is not 'none' for transition
     revealOverlay.classList.add('active');
     board.classList.add('highlight');
@@ -734,11 +361,14 @@ function showRevealOverlay() {
 
 // New: Event listener for the "Tap to Reveal" overlay
 revealOverlay.addEventListener("click", () => {
+    if (!gameReady || revealing || gamePhase !== "preparation") return;
+    revealing = true;
     revealOverlay.classList.remove('active'); // Start fade out
     board.classList.remove('highlight');
     setTimeout(() => {
         revealOverlay.style.display = 'none'; // Hide completely after transition
         setPsychicView(); // Transition to psychic view
+        revealing = false;
     }, 500); // Match CSS transition duration
 });
 
@@ -749,98 +379,66 @@ revealOverlay.addEventListener("click", () => {
 // gameContainer.style.display = 'none'; // Removed - now managed by initializeGame()
 
 // Function to reconstruct UI based on loaded game state
-function reconstructGameUI(loadedState) {
-    // These global variables are already set by loadGameState() before calling this.
-    // currentClueIndex, targetAngle, isTargetVisible, isPostGuessPhase
-
-    // Always display clues and target area based on loaded state
-    displayClueForIndex(currentClueIndex);
-    setTargetArea(); // Use the loaded targetAngle to render the target area
-
-    if (loadedState.currentClueIndex === -1 && !loadedState.isPostGuessPhase) {
-        // This means it's a state where a new round has been started/reset
-        // but no clue/target has been set yet. So, show the overlay.
+function reconstructGameUI() {
+    if (gamePhase === "preparation") {
         showRevealOverlay();
         updateCurrentTeamIndicator("psychic");
-        canMoveNeedle = false; // Psychic cannot move needle initially
-    } else if (loadedState.isPostGuessPhase) {
-        // Post-guess phase
-        // Show current score, hide needle, show target area, show next round button
-        revealOverlay.classList.remove('active');
-        revealOverlay.style.display = 'none';
+        return;
+    }
+    revealOverlay.classList.remove("active");
+    revealOverlay.style.display = "none";
+    displayClueForIndex(currentClueIndex);
+    setTargetArea();
+    updateNeedlePosition();
+    if (gamePhase === "psychic") setPsychicView();
+    else if (gamePhase === "guesser") setGuesserView();
+    else {
+        setGamePhase("postGuess");
         targetArea.style.display = "block";
         toggleButton.style.display = "none";
         skipQuestionButton.style.display = "none";
         nextRoundButton.style.display = "inline-block";
-        gameContainer.classList.remove('psychic-turn');
-        hideNeedle();
-        canMoveNeedle = false;
-        psychicInfoBalloon.style.display = "none"; // Hide info balloon
-        updateCurrentTeamIndicator("postGuess");
-        // Re-calculate and display score based on loaded data if possible.
-        // Assuming currentAngle is still 0 after load, we re-use saved targetAngle.
-        // The previous needle angle is not saved, so we can't show "how close it was" accurately,
-        // just the score.
-        scoreElement.textContent = `${teams[currentTeamIndex].name} scored ${calculateScore(loadedState.targetAngle)} points!`;
-    } else if (!loadedState.isTargetVisible) { // Guesser's turn
-        // Hide target area, show needle, toggle button says "Reveal"
-        revealOverlay.classList.remove('active');
-        revealOverlay.style.display = 'none';
-        targetArea.style.display = "none";
-        toggleButton.textContent = "Reveal Target";
-        toggleButton.style.display = "inline-block";
-        scoreElement.textContent = "";
+        gameContainer.classList.remove("psychic-turn");
+        psychicInfoBalloon.style.display = "none";
         showNeedle();
-        skipQuestionButton.style.display = "none";
-        nextRoundButton.style.display = "none";
-        gameContainer.classList.remove('psychic-turn');
-        canMoveNeedle = true;
-        psychicInfoBalloon.style.display = "none"; // Hide info balloon
-        updateCurrentTeamIndicator("guesser");
-    } else { // Psychic's turn (target is visible)
-        // Show target area, hide needle, toggle button says "Hide"
-        revealOverlay.classList.remove('active');
-        revealOverlay.style.display = 'none';
-        targetArea.style.display = "block";
-        toggleButton.textContent = "Hide for Guessers";
-        toggleButton.style.display = "inline-block";
-        skipQuestionButton.style.display = "inline-block";
-        nextRoundButton.style.display = "none";
-        gameContainer.classList.add('psychic-turn');
-        needle.style.transform = "rotate(0deg)"; // Reset needle to center for psychic
-        hideNeedle();
         canMoveNeedle = false;
-        psychicInfoBalloon.style.display = "block"; // Show info balloon
-        updateCurrentTeamIndicator("psychic");
-    }
-    // Ensure the toggleButton visibility is consistent with canMoveNeedle
-    if (canMoveNeedle) {
-        toggleButton.style.display = "inline-block";
+        updateCurrentTeamIndicator("postGuess");
+        scoreElement.textContent = lastRoundScore === null ? "Rodada concluída" :
+            `${teams[currentTeamIndex].name} scored ${lastRoundScore} points!`;
     }
 }
 
-// Consolidated Game Initialization Logic
-function initializeGame() {
-    const loadedState = loadGameState();
-
-    if (!loadedState) { // Completely fresh start, initialize with default teams
-        teams = [{ name: "Team 1", score: 0 }, { name: "Team 2", score: 0 }];
-        currentTeamIndex = 0;
-        
-        // Update with default teams
-        updateScoreDisplay();
-        
-        // Directly start a new game experience for fresh users
-        resetGame(); // Call resetGame to ensure exact new game state
-    } else { // Game state found
-        teams = loadedState.teams;
-        currentTeamIndex = loadedState.currentTeamIndex;
-        // Global variables (targetAngle, isTargetVisible, isPostGuessPhase, currentClueIndex)
-        // are set by loadGameState()
-        updateScoreDisplay(); // Update with loaded teams
-        reconstructGameUI(loadedState); // Reconstruct the UI based on the loaded state
+async function initializeGame() {
+    const status = document.getElementById("catalogStatus");
+    const retry = document.getElementById("retryCatalog");
+    retry.hidden = true;
+    status.textContent = "Carregando escalas…";
+    newGameButton.disabled = true;
+    try {
+        await loadScales();
+        const loadedState = loadGameState();
+        gameReady = true;
+        status.hidden = true;
+        newGameButton.disabled = false;
+        if (!loadedState) {
+            teams = [{ name: "Team 1", score: 0 }, { name: "Team 2", score: 0 }];
+            currentTeamIndex = 0;
+            resetGame();
+        } else {
+            updateScoreDisplay();
+            reconstructGameUI();
+            saveGameState();
+        }
+    } catch (error) {
+        console.error(error);
+        gameReady = false;
+        status.hidden = false;
+        status.textContent = "Não foi possível carregar as escalas.";
+        retry.hidden = false;
     }
 }
+
+document.getElementById("retryCatalog").addEventListener("click", initializeGame);
 
 document.addEventListener("DOMContentLoaded", () => {
     // MODAL AND BUTTON INITIALIZATION MOVED HERE
@@ -901,6 +499,7 @@ function setPsychicView() {
         displayClueForIndex(currentClueIndex); // Re-display clues based on global currentClueIndex
     }
     
+    setGamePhase("psychic");
     saveGameState(); // Save state after setting the clue
     updateCurrentTeamIndicator("psychic"); // Update the "Now Playing" pill for psychic turn
     
@@ -919,6 +518,7 @@ function setPsychicView() {
 }
 
 function setGuesserView() {
+    setGamePhase("guesser");
     canMoveNeedle = true;
     isPostGuessPhase = false; // Ensure this is false for the guesser phase
     
@@ -969,13 +569,16 @@ function initializeNewTargetArea() {
 
 function setRandomClues() {
     if (!clues || clues.length === 0) return;
+    presentationId = crypto.randomUUID();
+    currentNeedleAngle = 0;
+    lastRoundScore = null;
     currentClueIndex = Math.floor(Math.random() * clues.length); // Assign to global variable
     displayClueForIndex(currentClueIndex);
 }
 
 function displayClueForIndex(index) {
     if (!clues || clues.length === 0 || index < 0 || index >= clues.length) return;
-    const [left, right] = clues[index];
+    const { extremo_esquerdo: left, extremo_direito: right } = clues[index];
     document.getElementById("leftClue").textContent = left;
     document.getElementById("rightClue").textContent = right;
 }
@@ -1071,6 +674,7 @@ function updateNeedlePosition() {
 }
 
 function handleEnd() {
+    if (isDragging) saveGameState();
     isDragging = false;
 }
 
