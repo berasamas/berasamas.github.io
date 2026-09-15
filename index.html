@@ -123,20 +123,18 @@
             <div class="rating-row" role="group" aria-labelledby="difficultyLabel">
                 <span id="difficultyLabel" class="rating-label">Dificuldade</span>
                 <div class="rating-buttons">
-                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="1" aria-pressed="false">Fácil</button>
-                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="2" aria-pressed="false">Médio</button>
+                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="2" aria-pressed="false">Ok</button>
                     <button type="button" class="vote-chip" data-criterion="difficulty" data-value="3" aria-pressed="false">Difícil</button>
                 </div>
             </div>
             <div class="rating-row" role="group" aria-labelledby="funLabel">
                 <span id="funLabel" class="rating-label">Diversão</span>
                 <div class="rating-buttons">
-                    <button type="button" class="vote-chip" data-criterion="fun" data-value="1" aria-pressed="false">Fraca</button>
-                    <button type="button" class="vote-chip" data-criterion="fun" data-value="2" aria-pressed="false">Ok</button>
+                    <button type="button" class="vote-chip" data-criterion="fun" data-value="1" aria-pressed="false">Chato</button>
                     <button type="button" class="vote-chip" data-criterion="fun" data-value="3" aria-pressed="false">Legal</button>
                 </div>
             </div>
-            <p id="ratingStatus" class="rating-status" role="status" aria-live="polite">Opcional · avalie quando quiser.</p>
+            <p id="ratingStatus" class="rating-status" role="status" aria-live="polite" hidden></p>
             <button id="retryFeedback" class="rating-retry" type="button" hidden>Tentar salvar novamente</button>
         </section>
 
