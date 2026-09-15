@@ -44,7 +44,7 @@
                         <li>Now it’s up to the Psychic’s team to discuss the
                             clue and decide where to turn the dial</li>
                         <li>Click and drag the needle to set your guess.</li>
-                        <li>Click "Hide Target" to lock in your guess.</li>
+                        <li>After giving your clue, click "Hide for Guessers" and pass the device to your team.</li>
                         <li>Click "Reveal Target" to see how close you were.</li>
                         <li>Scoring:
                             <ul>
@@ -99,6 +99,8 @@
         </div>
         <div id="score"></div> <!-- MOVED HERE -->
 
+        <p id="catalogStatus" role="status">Carregando escalas…</p>
+        <button id="retryCatalog" hidden>Tentar novamente</button>
         <div id="gameBoardAndCluesContainer">
             <div class="board">
                 <div class="target-area" id="targetArea"></div>
@@ -116,6 +118,28 @@
             </div>
         </div>
 
+        <section id="ratingCard" class="rating-card" aria-labelledby="ratingTitle" lang="pt-BR" hidden>
+            <h3 id="ratingTitle" class="rating-header"><span aria-hidden="true">⭐</span> O que achou deste par?</h3>
+            <div class="rating-row" role="group" aria-labelledby="difficultyLabel">
+                <span id="difficultyLabel" class="rating-label">Dificuldade</span>
+                <div class="rating-buttons">
+                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="1" aria-pressed="false">Fácil</button>
+                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="2" aria-pressed="false">Médio</button>
+                    <button type="button" class="vote-chip" data-criterion="difficulty" data-value="3" aria-pressed="false">Difícil</button>
+                </div>
+            </div>
+            <div class="rating-row" role="group" aria-labelledby="funLabel">
+                <span id="funLabel" class="rating-label">Diversão</span>
+                <div class="rating-buttons">
+                    <button type="button" class="vote-chip" data-criterion="fun" data-value="1" aria-pressed="false">Fraca</button>
+                    <button type="button" class="vote-chip" data-criterion="fun" data-value="2" aria-pressed="false">Ok</button>
+                    <button type="button" class="vote-chip" data-criterion="fun" data-value="3" aria-pressed="false">Legal</button>
+                </div>
+            </div>
+            <p id="ratingStatus" class="rating-status" role="status" aria-live="polite">Opcional · avalie quando quiser.</p>
+            <button id="retryFeedback" class="rating-retry" type="button" hidden>Tentar salvar novamente</button>
+        </section>
+
         <div class="controls">
             <button id="toggleButton">Hide Target</button>
             <button id="skipQuestionButton" style="display: none;">Skip Question</button> <!-- NEW BUTTON -->
@@ -124,6 +148,7 @@
         <div id="totalScore">Total Score: 0</div> <!-- Kept original position for totalScore -->
 
         <script src="script.js"></script>
+        <script type="module" src="feedback.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
         <script>
@@ -142,13 +167,14 @@
         <footer>
             <p>&copy; 2024 Wavelength Game. All Rights Reserved.</p>
             <nav>
-                <a href="/">Home</a>
-                <a href="/terms.html">Terms of Service</a>
-                <a href="/privacy.html">Privacy Policy</a>
-                <a href="/about.html">About</a>
-                <a href="/changelog.html">Change Log</a>
+                <a href="./">Home</a>
+                <a href="./terms.html">Terms of Service</a>
+                <a href="./privacy.html">Privacy Policy</a>
+                <a href="./about.html">About</a>
+                <a href="./changelog.html">Change Log</a>
             </nav>
         </footer>
+    </div>
 </body>
 
 </html>
