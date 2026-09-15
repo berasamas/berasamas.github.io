@@ -51,7 +51,8 @@ function render() {
         button.setAttribute("aria-pressed", String(entry?.[button.dataset.criterion] === Number(button.dataset.value)));
     }
     retry.hidden = !entry?.pending || (!lastError && navigator.onLine);
-    if (!entry) status.textContent = "Opcional · avalie quando quiser.";
+    status.hidden = !entry;
+    if (!entry) status.textContent = "";
     else if (!entry.pending) status.textContent = "Avaliação salva. Obrigado!";
     else if (lastError?.includes("permission-denied")) status.textContent = "O Firebase recusou o envio. A avaliação está pendente.";
     else if (!storageAvailable) status.textContent = "Pendente · mantenha esta página aberta para salvar.";
