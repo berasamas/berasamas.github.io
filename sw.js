@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wavelength-game-cache-v6';
+const CACHE_NAME = 'wavelength-game-cache-v7';
 const coreFiles = ['./', './index.html', './style.css', './script.js', './feedback.js', './escalas.json'];
 
 self.addEventListener('install', event => {
